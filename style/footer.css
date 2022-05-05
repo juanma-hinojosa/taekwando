@@ -1,0 +1,75 @@
+footer {
+    width: 100%;
+    background-color: rgb(7, 6, 6);
+}
+
+footer .group-one {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 20px;
+}
+
+footer .group-one .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .group-one .box figure img {
+    width: 220px;
+}
+
+footer .group-one .box h2 {
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+footer .group-one .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+footer .group-one .social-midia a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: transparent;
+    text-align: center;
+    transition: all 300ms ease;
+    font-size: 1.2rem;
+}
+
+footer .group-one .social-midia a:hover {
+    color: #455261;
+}
+
+footer .span {
+    background-color: black;
+    padding: 15px 0px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 800px) {
+    footer .group-one {
+        width: 85%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 25px 0px;
+    }
+    footer .group-one .social-midia .link-escondio {
+        display: inline-block;
+    }
+}

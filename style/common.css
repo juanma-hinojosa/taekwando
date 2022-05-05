@@ -1,0 +1,16 @@
+:root {
+    --rojo: rgb(224,29,37);
+    --blanco2: #f2f2f2;
+    --transparente: rgba(0,0,0,.5);
+    --negro: #212529;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+

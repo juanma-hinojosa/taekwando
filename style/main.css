@@ -1,0 +1,30 @@
+main {
+    width: 100%;
+    height: 100vh;
+    background-image: 
+    linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.60)),
+        url(../img/bandicam-2019-12-16-03-26-53-292.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+main > .content-main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+@media (max-width: 450px) {
+    main {
+        height: 300px;
+        background-color: var(--rojo);
+        padding: 0;
+    }
+}

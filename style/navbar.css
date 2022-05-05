@@ -1,0 +1,150 @@
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    /* padding: 20px 0; */
+}
+
+.logo {
+    /* height: 60px; */
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.logo > img {
+    width: 100%;
+}
+
+#toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: red; */
+}
+
+
+#toggle::before {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: var(--negro);
+    transform: translateY(-5px);
+    transition: .2s;
+    /* color: red; */
+}
+
+#toggle::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: var(--negro);
+    transform: translateY(5px);
+    transition: .2s;
+    /* color: red; */
+}
+
+#toggle.active::before {
+    transform: translateY(0px) rotate(45deg);
+}
+
+#toggle.active::after {
+    transform: translateY(0px) rotate(-45deg);
+}
+
+#toggle.active {
+    background: #fff;
+    /* color: red; */
+}
+
+#navbar {
+    position: relative;
+    height: 60px;
+    right: 60px;
+    background: var(--blanco2);
+    transition: .5s;
+    /* estas dos ultimas caracteristicas talvez no sean necesarias */
+    width: 0px;
+    overflow: hidden;
+}
+
+#navbar.active {
+    width: 360px;
+}
+
+#navbar ul {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#navbar ul li {
+    list-style: none;
+}
+
+
+
+#navbar ul li a {
+    color: var(--transparente);
+    height: 60px;
+    line-height: 60px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0 15px;
+    letter-spacing: 2px;
+}
+
+#navbar ul li a:hover {
+    color: var(--negro);
+
+}
+
+@media (min-width:1000px) {
+    #navbar ul .li-icons {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    #navbar {
+        position: fixed;
+        bottom: -100%;
+        right: 0;
+        width: 100%;
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+    }
+    #navbar.active {
+        height: calc(100vh - 60px);
+        bottom: 0;
+        width: 100%;
+    }
+    #navbar ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
